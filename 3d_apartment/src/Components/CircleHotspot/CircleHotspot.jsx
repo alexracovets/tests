@@ -24,7 +24,7 @@ export default function CircleHotspot({ hotspot }) {
     useEffect(() => {
         gsap.to(animParameter, {
             opacity: isHover ? 1 : 0.3,
-            duration: 0.3
+            duration: 0.2
         })
     }, [isHover])
 

@@ -66,7 +66,7 @@ export default function Interior({ setModelRef }) {
         setTimeout(() => {
             setIsVisible(false);
         }, 800)
-    }, [hotspotsStateCurrent])
+    }, [hotspotsStateCurrent, materials])
 
     return (
         <group ref={modelRef}>

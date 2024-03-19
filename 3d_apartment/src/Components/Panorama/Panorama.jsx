@@ -2,8 +2,7 @@ import { Sphere } from "@react-three/drei";
 import { useEffect, useState } from "react";
 import { useSelector } from "react-redux";
 import PropTypes from 'prop-types';
-import * as THREE from 'three';
-import gsap from 'gsap';
+import * as THREE from 'three'; 
 
 Panorama.propTypes = {
     rotation: PropTypes.array,
@@ -13,19 +12,17 @@ Panorama.propTypes = {
 export default function Panorama({ panoram, rotation }) {
     const cameraState = useSelector((state) => state.stateCamera);
     const hotspotsStateCurrent = useSelector((state) => state.stateHotspots.current);
-    const [opacityParametr] = useState({ opacity: 1 })
+    const [opacityParametr, setOpacityParametr] = useState({ opacity: 1 })
 
     useEffect(() => {
-        gsap.to(opacityParametr, {
-            opacity: 0.1,
-            duration: 0.5,
-            ease: "power2.inOut",
+        setOpacityParametr({
+            opacity: 0
         })
-        gsap.to(opacityParametr, { 
-            opacity: 1,
-            duration: 0.5,
-            ease: "power2.inOut",
-        })
+        setTimeout(() => {
+            setOpacityParametr({
+                opacity: 1
+            })
+        }, 800)
     }, [hotspotsStateCurrent]);
 
     return (

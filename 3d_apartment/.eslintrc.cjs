@@ -16,6 +16,6 @@ module.exports = {
       'warn',
       { allowConstantExport: true },
     ],
-    "react/no-unknown-property": ["error", { "ignore": ["args", "intensity", "castShadow", "receiveShadow", "geometry", "material", "quaternion", "position", "rotation", "dispose", "material-roughness", "emissive", "emissiveIntensity", "matcap", "side", "transparent", "depthWrite", "visible", "map", "attach", "far", "near", "morphTargetDictionary", "morphTargetInfluences", "depthTexture", "colorTexture"] }]
+    "react/no-unknown-property": ["error", { "ignore": ["args", "intensity", "castShadow", "receiveShadow", "geometry", "material", "quaternion", "position", "rotation", "dispose", "material-roughness", "emissive", "emissiveIntensity", "matcap", "side", "transparent", "depthWrite", "visible", "map", "attach", "far", "near", "morphTargetDictionary", "morphTargetInfluences", "depthTexture", "colorTexture", "object"] }]
   },
 }
